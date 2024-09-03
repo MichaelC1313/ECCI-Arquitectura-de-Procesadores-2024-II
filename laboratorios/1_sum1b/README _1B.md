@@ -72,4 +72,4 @@ endmodule
 
 ### Diagrama
 
-
+![Sumador 1 Bit](laboratorios/figs/sumador 1b.jpg)
