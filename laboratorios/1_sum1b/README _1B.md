@@ -4,7 +4,7 @@ Aquí tienes un archivo `.md` que explica el funcionamiento del código Verilog 
 
 # Explicación del Código Verilog: `sum1b`
 
-Este documento explica el funcionamiento de un módulo Verilog denominado `sum1b`. Este módulo implementa un sumador de 1 bit que toma dos bits de entrada (`A` y `B`), un bit de acarreo de entrada (`Ci`), y produce un bit de suma (`Sum`) y un bit de acarreo de salida (`Cout`).
+Este módulo implementa un sumador de 1 bit que toma dos bits de entrada (`A` y `B`), un bit de acarreo de entrada (`Ci`) que produce un bit de suma (`Sum`) y un bit de acarreo de salida (`Cout`).
 
 ## Descripción del Módulo
 
@@ -29,18 +29,14 @@ end
 endmodule
 ```
 
-### Entradas y Salidas
-
 - **Entradas:**
   - `A`: Primer bit a sumar.
   - `B`: Segundo bit a sumar.
-  - `Ci`: Bit de acarreo de entrada (carry-in).
+  - `Ci`: Carry entrada (carry-in)
 
 - **Salidas:**
   - `Sum`: Resultado de la suma de los bits de entrada.
   - `Cout`: Bit de acarreo de salida (carry-out), que indica si hay un acarreo hacia el siguiente bit más significativo.
-
-### Variables Internas
 
 - **`result`**: Un registro de 2 bits (`reg [1:0]`) que se utiliza para almacenar el resultado completo de la suma de `A`, `B`, y `Ci`.
 
@@ -54,14 +50,14 @@ endmodule
    - El bloque `always@(*)` se activa siempre que alguna de las señales `A`, `B`, o `Ci` cambie de valor.
    - Dentro de este bloque, se realiza la operación de suma de `A`, `B`, y `Ci`. El resultado es almacenado en el registro `result`, que tiene dos bits para acomodar tanto el resultado de la suma como el acarreo generado.
 
-### Comportamiento
+### Cómo funciona?
 
 - **Suma de 1 Bit**: 
   - La operación de suma entre `A`, `B`, y `Ci` puede generar un resultado entre `0` y `3`, lo cual se puede representar en dos bits.
   - El bit menos significativo (`result[0]`) se asigna a `Sum`, que es el resultado de la suma de los bits de entrada.
   - El bit más significativo (`result[1]`) se asigna a `Cout`, que indica si la suma generó un acarreo hacia el siguiente bit.
 
-### Ejemplo de Funcionamiento
+### Tabla de verdad
 
 | `A` | `B` | `Ci` | `Cout` | `Sum` |
 |:---:|:---:|:---:|:------:|:-----:|
@@ -74,10 +70,6 @@ endmodule
 |  1  |  1  |  0  |    1   |   0   |
 |  1  |  1  |  1  |    1   |   1   |
 
-### Resumen
+### Diagrama
 
-Este módulo Verilog es un sumador básico de 1 bit que calcula la suma de dos bits de entrada y un bit de acarreo, generando un resultado de suma y un bit de acarreo de salida. Este tipo de módulo es fundamental para construir sumadores de mayor tamaño, como un sumador de 4 bits o más.
 
----
-
-Este archivo `.md` explica el código de manera detallada y proporciona ejemplos para facilitar la comprensión.
