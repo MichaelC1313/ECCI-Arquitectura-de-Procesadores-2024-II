@@ -49,16 +49,9 @@ El módulo `sum4b` es un sumador de 4 bits que se construye utilizando cuatro in
    - `s2`: Suma los terceros bits (`A[2]` y `B[2]`) junto con el acarreo `c2` producido por la segunda suma. Produce la suma `Sum[2]` y un acarreo `c3`.
    - `s3`: Suma los bits más significativos (`A[3]` y `B[3]`) junto con el acarreo `c3` producido por la tercera suma. Produce la suma `Sum[3]` y el acarreo final `Cout`.
 
-### Comportamiento
+### Cómo funciona?
 
-- **Propagación del Acarreo:**
   - El acarreo se propaga de un bit a otro, desde el bit menos significativo hasta el más significativo.
   - Esto permite que el módulo `sum4b` maneje correctamente la adición de números de 4 bits, produciendo tanto la suma de los bits como el acarreo final.
 
-### Resumen
 
-El módulo `sum4b` es un sumador de 4 bits que utiliza el sumador de 1 bit `sum1b` como bloque de construcción. Al conectar los sumadores de 1 bit en serie, el módulo puede sumar dos números de 4 bits y producir un resultado con acarreo. Este tipo de diseño modular es común en hardware digital para crear sumadores de mayor tamaño a partir de bloques más simples.
-
----
-
-Este archivo `.md` explica cómo el módulo `sum4b` expande la funcionalidad del sumador de 1 bit para operar con números de 4 bits, detallando el proceso de propagación del acarreo y la instanciación de los sumadores.
