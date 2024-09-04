@@ -2,9 +2,9 @@ Aquí tienes un archivo `.md` que explica el funcionamiento del código Verilog 
 
 ---
 
-# Explicación del Código Verilog: `sum4b`
+# SUMADOR 4 BITS
 
-Este documento explica el funcionamiento de un módulo Verilog denominado `sum4b`. Este módulo implementa un sumador de 4 bits utilizando instancias del sumador de 1 bit (`sum1b`) previamente descrito.
+Para este modulo implementaremos el anteriormente realizado (SUMADOR 1 BIT), llamando a traves de la instancia 
 
 ## Descripción del Módulo
 
