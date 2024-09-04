@@ -2,7 +2,7 @@ Aquí tienes un archivo `.md` que explica el funcionamiento del código Verilog 
 
 ---
 
-# Explicación del Código Verilog: `sum1b`
+# SUMADOR DE 1 BIT
 
 Este módulo implementa un sumador de 1 bit que toma dos bits de entrada (`A` y `B`), un bit de acarreo de entrada (`Ci`) que produce un bit de suma (`Sum`) y un bit de acarreo de salida (`Cout`).
 
